@@ -18,7 +18,7 @@ bot.on('ready', (discord) => {
 
   const channel = discord.channels.cache.get('1220886122914123830')
 
-  cron.schedule('0 * * * *', () => main(channel!));
+  cron.schedule('* * * * *', () => main(channel!));
 });
 
 async function fetchAvailability() {
