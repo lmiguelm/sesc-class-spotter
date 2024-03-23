@@ -11,7 +11,7 @@ export const bot = new Client({
 bot.login(process.env.DISCORD_TOKEN)
 
 bot.on('ready', (discord) => {
-  console.log(`Bot started with: ${bot.user?.tag}`)
+  console.log(`v1.0.0 Bot started with: ${bot.user?.tag}`)
   const channel = discord.channels.cache.get('1220886122914123830')
   cron.schedule('0 * * * *', () => main(channel!))
 })
