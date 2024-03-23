@@ -13,7 +13,7 @@ bot.login(process.env.DISCORD_TOKEN)
 bot.on('ready', (discord) => {
   console.log(`v1.0.0 Bot started with: ${bot.user?.tag}`)
   const channel = discord.channels.cache.get('1220886122914123830')
-  cron.schedule('0 * * * *', () => main(channel!))
+  cron.schedule('* * * * *', () => main(channel!))
 })
 
 async function fetchAvailability() {
