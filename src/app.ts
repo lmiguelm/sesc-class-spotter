@@ -12,10 +12,8 @@ bot.login(process.env.DISCORD_TOKEN)
 
 bot.on('ready', (discord) => {
   console.log(`Bot started with: ${bot.user?.tag}`)
-
   const channel = discord.channels.cache.get('1220886122914123830')
-
-  cron.schedule('* * * * *', () => main(channel!))
+  cron.schedule('0 * * * *', () => main(channel!))
 })
 
 async function fetchAvailability() {
@@ -45,9 +43,7 @@ async function fetchAvailability() {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function main(bot: any) {
   try {
-    bot.send('test')
     const availableCourses = await fetchAvailability()
-    bot.send('test: ', availableCourses)
 
     availableCourses.forEach((course) => {
       bot.send(
