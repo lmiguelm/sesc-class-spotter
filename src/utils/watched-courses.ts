@@ -1,0 +1,4 @@
+export const COURSES  ={
+  CLUBE_DO_FUTSAL: '44336-86',
+  CLUBE_DO_VOLEI: '44171-86'
+}
