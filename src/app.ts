@@ -42,6 +42,6 @@ async function main(bot: any) {
   const availableCourses = await fetchAvailability()
 
   availableCourses.forEach(course => {
-    bot.send(`Há ${course.vagasDisponiveis} ${course.vagasDisponiveis > 1 ? 'vagas disponíveis' : 'vaga disponível'}  para o curso "${course.cursoTitulo}". Corre!!!!!`)
+    bot.send(`@here\n\nHá ${course.vagasDisponiveis} ${course.vagasDisponiveis > 1 ? 'vagas disponíveis' : 'vaga disponível'}  para o curso "${course.cursoTitulo}". Corre!!!!!`)
   })
 }
